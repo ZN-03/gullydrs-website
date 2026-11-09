@@ -1,11 +1,11 @@
 :root {
---ink: #e9f3ff;
---muted: #9fb0cc;
---night: #070b1f;
---panel: #0f1633;
---line: #22305e;
---cyan: #46dcf0;
---purple: #b45af0;
+--ink: #f5f7fa;
+--muted: #aab4c8;
+--night: #121826;
+--panel: #1d2538;
+--line: #2a3450;
+--cyan: #ffc83d;
+--purple: #ffc83d;
 --out: #ff4068;
 --notout: #28e696;
 --umpire: #ffc432;
@@ -15,18 +15,18 @@ color-scheme: dark;
 html { scroll-padding-top: env(safe-area-inset-top, 0px); }
 body {
 margin: 0; background: var(--night); color: var(--ink);
-font: 400 18px/1.6 Hind, "Segoe UI", system-ui, sans-serif;
+font: 400 18px/1.6 Inter, "Segoe UI", system-ui, sans-serif;
 padding-top: env(safe-area-inset-top, 0px); padding-bottom: env(safe-area-inset-bottom, 0px);
 }
 a { color: var(--cyan); }
 a:focus-visible, button:focus-visible { outline: 3px solid var(--cyan); outline-offset: 3px; border-radius: 4px; }
 .wrap { max-width: 1120px; margin: 0 auto; padding: 0 24px; }
-h1, h2, h3 { font-family: "Saira Condensed", "Arial Narrow", sans-serif; line-height: 1.02; margin: 0; }
+h1, h2, h3 { font-family: Inter, "Segoe UI", sans-serif; line-height: 1.02; font-style: italic; font-weight: 900; letter-spacing: -.02em; margin: 0; }
 /* header */
 header { display: flex; align-items: center; justify-content: space-between; padding: 22px 0; }
 .brand { display: flex; align-items: center; gap: 12px; text-decoration: none; color: var(--ink); }
-.brand img { width: 44px; height: auto; }
-.brand span { font: 700 26px/1 "Saira Condensed", sans-serif; letter-spacing: .01em; }
+.brand img { width: 40px; height: 40px; border-radius: 10px; }
+.brand span { font: italic 900 26px/1 Inter, sans-serif; letter-spacing: -.02em; }
 .nav a { color: var(--muted); text-decoration: none; margin-left: 22px; font-weight: 500; }
 .nav a:hover { color: var(--ink); }
 /* hero: the review itself is the hero */
@@ -37,14 +37,14 @@ header { display: flex; align-items: center; justify-content: space-between; pad
 color: #06101f; background: linear-gradient(90deg, var(--cyan), var(--purple)); }
 .note { display: block; margin-top: 14px; color: var(--muted); font-size: 15px; }
 .replay { position: relative; border-radius: 18px; overflow: hidden; border: 1px solid var(--line);
-box-shadow: 0 0 0 1px rgba(70,220,240,.15), 0 30px 80px -30px rgba(180,90,240,.55); background: #000; }
+box-shadow: 0 0 0 1px rgba(255,200,61,.15), 0 30px 80px -30px rgba(255,200,61,.35); background: #000; }
 .replay video { display: block; width: 100%; height: auto; }
 section { padding: 72px 0; border-top: 1px solid var(--line); }
 section h2 { font-size: clamp(38px, 5vw, 60px); font-weight: 700; margin-bottom: 28px; }
 /* steps: a real sequence, so it is numbered */
 ol.steps { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; counter-reset: s; }
 ol.steps li { counter-increment: s; }
-ol.steps li::before { content: counter(s); display: block; font: 800 72px/1 "Saira Condensed", sans-serif;
+ol.steps li::before { content: counter(s); display: block; font: italic 900 72px/1 Inter, sans-serif;
 color: transparent; -webkit-text-stroke: 2px var(--cyan); margin-bottom: 8px; }
 ol.steps h3 { font-size: 28px; margin-bottom: 6px; }
 ol.steps p { margin: 0; color: var(--muted); max-width: 32ch; }
@@ -55,7 +55,7 @@ ol.steps p { margin: 0; color: var(--muted); max-width: 32ch; }
 .pitches p { margin: 0; color: var(--muted); }
 .facts { columns: 2; column-gap: 48px; max-width: 900px; }
 .facts p { break-inside: avoid; margin: 0 0 22px; }
-.facts strong { display: block; font: 700 24px/1.1 "Saira Condensed", sans-serif; color: var(--ink); margin-bottom: 4px; }
+.facts strong { display: block; font: italic 900 22px/1.15 Inter, sans-serif; color: var(--ink); margin-bottom: 4px; }
 .facts p { color: var(--muted); }
 footer { border-top: 1px solid var(--line); padding: 32px 0 48px; color: var(--muted); font-size: 15px;
 display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
@@ -68,4 +68,4 @@ ol.steps, .pitches { grid-template-columns: 1fr; }
 .facts { columns: 1; }
 .nav a:not(:last-child) { display: none; }
 }
-@media (prefers-reduced-motion: reduce) { .replay video { display: none; } .replay { background: url(assets/poster.jpg) center/cover; aspect-ratio: 970/764; } }
+@media (prefers-reduced-motion: reduce) { .replay video { display: none; } .replay { background: url(assets/poster.jpg) center/cover; aspect-ratio: 4/3; } }
