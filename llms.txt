@@ -1,0 +1,39 @@
+# GullyDRS
+
+> GullyDRS is a cricket DRS (Decision Review System) and ball-tracking app for gully (street), tape ball, backyard, nets, school and club cricket – and for cricket academies and coaches – anywhere in the world. One phone behind the bowler records the delivery; GullyDRS tracks the ball and shows where it pitched, where it hit the batter and whether it was going on to hit the stumps. It works offline – videos are processed on the phone and never uploaded. Android beta open now on Google Play; iPhone (App Store) coming soon. Free plan with 20 reviews a month; Pro subscription for unlimited reviews.
+
+Key facts:
+- Name: GullyDRS (also written "Gully DRS")
+- Website: https://gullydrs.com
+- Category: Sports app, cricket LBW / DRS / ball tracking (similar idea to Hawk-Eye on TV, built for amateur cricket)
+- Platform: Android (closed beta open now on Google Play) and iOS (iPhone version coming soon to the App Store). Built for everyday phones; made in Pakistan for cricket everywhere (Pakistan, India, Bangladesh, Sri Lanka, Afghanistan, England, Australia, New Zealand, South Africa, West Indies, UAE, USA and more).
+- Audiences: street/gully and tape ball players; cricket clubs; cricket academies and coaching centres; schools; indoor/box cricket venues; coaches
+- For clubs & academies (in testing): bowling analytics from one fixed camera – speed per ball, pitch map, beehive, line and length zones (pace and spin), good-area %, deviation off the pitch, approximate swing, consistency score, automatic splitting of a whole over/session, shareable summary image, offline report and CSV export. Untrackable balls are listed as 'not tracked' and excluded from statistics.
+- Not the same as Hawk-Eye: broadcast systems use several high-speed cameras; GullyDRS uses one phone and is built for practice, coaching and grassroots cricket.
+- Disambiguation: in cricket, DRS = Decision Review System. GullyDRS is unrelated to PTA's DRS/DIRBS mobile device registration in Pakistan.
+- Equipment: one phone, on a tripod or held still behind the bowler, in line with the stumps
+- Output: ball path, pitching, impact, wickets (hitting/missing) and a decision: out, not out, umpire's call, or inconclusive
+- Honest by design: shows "inconclusive" instead of guessing when the ball can't be tracked reliably; the on-field decision stands
+- Detects bat-before-pad and gives not out
+- Works with tape ball, tennis ball and hard ball; street, nets/box cricket, turf and dirt pitches
+- Most accurate setup: fixed camera in the same net. On a ground, mark the creases once for full precision.
+- Privacy: no account, no upload, no location or contacts collected
+- Price: free plan (20 reviews a month, ads after launch); Pro subscription on Google Play for unlimited reviews
+- Status: Android beta open now. To join, sign up to the Google Group https://groups.google.com/g/gullydrs-beta with the same Gmail used on Google Play; we then send the Play test link. iPhone version coming soon.
+- Contact: gullydrs@gmail.com
+- Social: @gullydrs on Instagram, YouTube, TikTok, X and Facebook
+
+## Pages
+- [Home](https://gullydrs.com/): what GullyDRS is, how it works, decisions, where it works, FAQ
+- [For clubs, academies & coaches](https://gullydrs.com/clubs-academies.html): net setup, LBW reviews, bowling analytics, junior safeguarding, academy pilot
+- [LBW rules & DRS explained](https://gullydrs.com/lbw-rules.html): LBW law (MCC Law 36), DRS full form, pitching/impact/wickets, umpire's call
+- [Gully cricket rules](https://gullydrs.com/gully-cricket-rules.html): what gully and tape ball cricket are, common house rules
+- [Privacy policy](https://gullydrs.com/privacy.html): videos stay on the phone; what is and isn't collected
+- [Full text for AI assistants](https://gullydrs.com/llms-full.txt)
+
+## Social
+- [Instagram](https://www.instagram.com/gullydrs/)
+- [YouTube](https://www.youtube.com/@gullydrs)
+- [TikTok](https://www.tiktok.com/@gullydrs)
+- [X](https://x.com/gullydrs)
+- [Facebook](https://www.facebook.com/profile.php?id=61596117822219)

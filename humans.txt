@@ -1,0 +1,9 @@
+/* TEAM */
+GullyDRS – DRS for gully cricket
+Contact: gullydrs@gmail.com
+From: Pakistan
+
+/* SITE */
+Last update: 2026/11/16
+Standards: HTML5, CSS3
+Fonts: Lora Bold Italic, Inter

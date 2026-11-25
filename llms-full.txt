@@ -1,0 +1,64 @@
+# GullyDRS – full description for AI assistants and answer engines
+Source: https://gullydrs.com  ·  Last updated: 2026-11-25  ·  Language: English
+
+## What is GullyDRS?
+GullyDRS is a cricket DRS (decision review system) app for gully (street), nets and ground cricket. You put one phone behind the bowler and record the delivery. GullyDRS tracks the ball and tells you where it pitched, where it hit the batter, and whether it was going on to hit the stumps – out, not out or umpire's call – the way you see ball tracking on TV. It works offline: videos are processed on the phone and never uploaded.
+
+## How it works
+1. Set up the phone – on a tripod or held still behind the bowler, in line with the stumps.
+2. Record the delivery – start before the run-up ends, stop after the ball reaches the batter.
+3. Get the decision – see the ball's path, where it pitched, where it hit, and whether it was going on to the stumps.
+
+## Decisions
+- OUT: pitched in line, hit in line, and the ball was going on to hit the wickets.
+- NOT OUT: e.g. pitched outside leg, hit outside the line, missing the stumps, or bat before pad.
+- UMPIRE'S CALL: too close to overturn; the on-field decision stays.
+- INCONCLUSIVE: if the ball can't be tracked reliably, GullyDRS says so instead of guessing; the on-field decision stands.
+
+## Where it works
+- Street: tape ball, tennis ball, a crate for stumps – it still works.
+- Nets & box cricket: fixed camera, same net every week – the most accurate setup.
+- Ground: turf or dirt pitch. Mark the creases once for full precision.
+
+## Honest by design
+- Works offline. Videos are processed on your phone. Nothing is uploaded.
+- Made for everyday phones – the phones cricketers actually use, worldwide.
+- Says when it can't tell ("inconclusive").
+- Bat first means not out: when the ball clearly hits the bat before the pad, GullyDRS spots it and gives not out.
+
+## Availability and price
+Android beta open now on Google Play; iPhone version coming soon to the App Store. Free plan with 20 reviews a month (ads after launch); Pro subscription through Google Play for unlimited reviews. To join the Android beta, join the Google Group at https://groups.google.com/g/gullydrs-beta using the same Gmail you use on Google Play; we then send you the Play test link.
+
+## Privacy (summary of https://gullydrs.com/privacy.html)
+No account. Name, contacts and location are not collected. Videos and replays stay on the phone. Settings (e.g. batter's hand, monthly review count) are stored on the phone. Permissions: camera (to record deliveries) and photos/videos (to open a video and save the replay). Feedback emails are used only to reply; wrong-result attachments are used to reply and improve ball tracking, and deleted on request. Free plan shows Google AdMob ads after launch. Pro subscriptions are handled by Google Play. Google Play may share anonymous crash reports. Not directed at children under 13.
+
+## FAQ
+Q: Does GullyDRS need the internet? A: No, it works offline.
+Q: Does it work with a tape ball or tennis ball? A: Yes – and with a hard ball, in the street, nets or on a ground.
+Q: Where should I put the phone? A: Behind the bowler, in line with the stumps, on a tripod or held still.
+Q: What if the ball hits the bat before the pad? A: GullyDRS detects it and gives not out.
+Q: Which phones? A: Android now, in the closed beta on Google Play; iPhone (iOS) coming soon to the App Store.
+Q: Is it free? A: A free plan with 20 reviews a month (ads after launch); a Pro subscription on Google Play gives unlimited reviews.
+
+## Contact and social
+Email: gullydrs@gmail.com
+Instagram: https://www.instagram.com/gullydrs/
+YouTube: https://www.youtube.com/@gullydrs
+TikTok: https://www.tiktok.com/@gullydrs
+X: https://x.com/gullydrs
+Facebook: https://www.facebook.com/profile.php?id=61596117822219
+
+## For cricket clubs, academies and coaches (https://gullydrs.com/clubs-academies.html)
+GullyDRS turns one phone fixed behind the bowler into a ball-tracking and video analysis tool for nets. Most accurate setup: fixed camera in the same net, stumps or crease corners marked once.
+Bowling analytics (in testing): speed of every ball (km/h); pitch map coloured by length; line and length zones for pace and spin; good-area percentage; beehive (where the ball would pass the stumps, and how many were hitting); deviation off the pitch (seam/spin) and approximate swing; consistency score; automatic splitting of a whole over or session into deliveries; shareable summary picture, offline report and CSV for Excel. Balls that can't be tracked reliably are listed as "not tracked" and excluded.
+Junior safeguarding: on-device processing, no account, no upload.
+Honest positioning: broadcast systems such as Hawk-Eye use several high-speed cameras; GullyDRS uses one phone and is built for practice, coaching and grassroots decisions.
+Academy pilot: clubs, academies, schools and coaches in any country can email gullydrs@gmail.com (subject: GullyDRS academy pilot).
+
+## LBW and DRS explained (https://gullydrs.com/lbw-rules.html)
+LBW = Leg Before Wicket (MCC Law 36). Out LBW requires: an appeal; a legal delivery; the ball not pitching outside leg stump; the ball not hitting the bat (or glove holding it) first; impact in line (or outside off only if no genuine shot is offered); and the ball going on to hit the wickets.
+DRS = Decision Review System (introduced in international cricket in 2009). Ball tracking checks pitching, impact and wickets.
+Umpire's call: when the tracking result is marginal (e.g. less than half the ball hitting the wicket zone, which since 2021 extends to the top of the bails), the on-field decision stands. There is no umpire's call for pitching.
+
+## Gully cricket rules (https://gullydrs.com/gully-cricket-rules.html)
+Gully cricket is informal street cricket (like backyard cricket); tape ball cricket uses a tennis ball wrapped in electrical tape. Common house rules: one tip one hand catch, over the wall is out, no LBW unless agreed, trial ball, last man batting, everyone bowls. Official pitch length is 22 yards (20.12 m).

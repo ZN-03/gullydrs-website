@@ -1,0 +1,49 @@
+# Used only if you host on Netlify. GitHub Pages ignores this file.
+[build]
+  publish = "."
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    X-Frame-Options = "DENY"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "camera=(), microphone=(), geolocation=(), interest-cohort=()"
+    Strict-Transport-Security = "max-age=31536000; includeSubDomains"
+
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=2592000"
+
+[[headers]]
+  for = "/*.html"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+[[headers]]
+  for = "/llms*.txt"
+  [headers.values]
+    Content-Type = "text/plain; charset=utf-8"
+
+# Old asset paths from the previous version of the site
+[[redirects]]
+  from = "/style.css"
+  to = "/assets/style.css"
+  status = 301
+[[redirects]]
+  from = "/assets/poster.jpg"
+  to = "/assets/img/poster.jpg"
+  status = 301
+[[redirects]]
+  from = "/assets/logo.png"
+  to = "/assets/img/icon-192.png"
+  status = 301
+[[redirects]]
+  from = "/assets/favicon.png"
+  to = "/assets/img/favicon-32.png"
+  status = 301
+[[redirects]]
+  from = "/index.html"
+  to = "/"
+  status = 301

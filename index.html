@@ -1,76 +1,730 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>GullyDRS – ball tracking for gully, nets and ground cricket</title>
-<meta name="description" content="GullyDRS turns one phone into a decision review system. Record the delivery, get pitching, impact and wickets. Works offline on everyday Android phones.">
-<meta property="og:title" content="GullyDRS – DRS for gully cricket">
-<meta property="og:description" content="One phone behind the bowler. Pitching, impact, wickets – in seconds, offline.">
-<meta property="og:image" content="https://gullydrs.app/assets/poster.jpg">
-<link rel="icon" href="assets/favicon.png">
+<title>GullyDRS – Cricket DRS App for Gully Cricket, Clubs &amp; Academies</title>
+<meta name="description" content="Cricket DRS app: one phone behind the bowler shows LBW ball tracking – pitching, impact and wickets. For gully cricket, clubs, academies and coaches. Works offline.">
+<meta name="keywords" content="GullyDRS, DRS app for cricket, cricket DRS app, LBW app, LBW ball tracking app, cricket ball tracking app, cricket video analysis app, cricket coaching app, cricket academy, bowling analysis, pitch map, gully cricket, tape ball cricket, backyard cricket, street cricket, hawk-eye app, decision review system, umpire's call, Android cricket app, iPhone cricket app, iOS cricket app">
+<meta name="author" content="GullyDRS">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+<meta name="theme-color" content="#F4EEE3">
+<meta name="color-scheme" content="light">
+<meta name="format-detection" content="telephone=no">
+<link rel="canonical" href="https://gullydrs.com/">
+<link rel="alternate" hreflang="en" href="https://gullydrs.com/">
+<link rel="alternate" hreflang="x-default" href="https://gullydrs.com/">
+
+<!-- Open Graph / social -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="GullyDRS">
+<meta property="og:locale" content="en_GB">
+<meta property="og:url" content="https://gullydrs.com/">
+<meta property="og:title" content="GullyDRS – the cricket DRS app for gully, tape ball &amp; backyard cricket">
+<meta property="og:description" content="One phone behind the bowler. Pitching, impact and wickets in seconds – offline, on everyday phones.">
+<meta property="og:image" content="https://gullydrs.com/assets/img/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="GullyDRS logo: a red cricket ball with a gold seam. Ball tracking for street, nets and ground cricket.">
+<meta property="og:video" content="https://gullydrs.com/assets/demo.mp4">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@gullydrs">
+<meta name="twitter:title" content="GullyDRS – DRS for gully cricket">
+<meta name="twitter:description" content="One phone behind the bowler. Pitching, impact and wickets – like on TV.">
+<meta name="twitter:image" content="https://gullydrs.com/assets/img/og-image.jpg">
+
+<!-- Icons & app -->
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" href="/assets/img/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+
+<!-- Fonts: Lora Bold Italic self-hosted from the brand kit, Inter for text -->
+<link rel="preload" href="/assets/fonts/lora-bold-italic.woff" as="font" type="font/woff" crossorigin>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,600;1,900&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/style.css">
+<link rel="preload" href="/assets/img/poster.webp" as="image" type="image/webp">
+
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "Organization",
+   "@id": "https://gullydrs.com/#org",
+   "name": "GullyDRS",
+   "url": "https://gullydrs.com/",
+   "logo": {
+    "@type": "ImageObject",
+    "url": "https://gullydrs.com/assets/img/icon-512.png",
+    "width": 512,
+    "height": 512
+   },
+   "email": "gullydrs@gmail.com",
+   "description": "GullyDRS makes a cricket decision review system (DRS) and ball-tracking app for street (gully), nets and ground cricket that runs on one phone.",
+   "sameAs": [
+    "https://www.instagram.com/gullydrs/",
+    "https://www.youtube.com/@gullydrs",
+    "https://www.tiktok.com/@gullydrs",
+    "https://x.com/gullydrs",
+    "https://www.facebook.com/profile.php?id=61596117822219"
+   ],
+   "contactPoint": {
+    "@type": "ContactPoint",
+    "email": "gullydrs@gmail.com",
+    "contactType": "customer support",
+    "availableLanguage": [
+     "English",
+     "Urdu",
+     "Hindi"
+    ]
+   },
+   "areaServed": "Worldwide",
+   "knowsAbout": [
+    "Cricket",
+    "Decision Review System (DRS)",
+    "Leg before wicket (LBW)",
+    "Ball tracking",
+    "Gully cricket",
+    "Tape ball cricket"
+   ]
+  },
+  {
+   "@type": "WebSite",
+   "@id": "https://gullydrs.com/#website",
+   "url": "https://gullydrs.com/",
+   "name": "GullyDRS",
+   "inLanguage": "en",
+   "publisher": {
+    "@id": "https://gullydrs.com/#org"
+   }
+  },
+  {
+   "@type": "WebPage",
+   "@id": "https://gullydrs.com/#webpage",
+   "url": "https://gullydrs.com/",
+   "name": "GullyDRS – Cricket DRS App for Gully, Tape Ball & Backyard Cricket",
+   "isPartOf": {
+    "@id": "https://gullydrs.com/#website"
+   },
+   "about": {
+    "@id": "https://gullydrs.com/#app"
+   },
+   "primaryImageOfPage": "https://gullydrs.com/assets/img/og-image.jpg",
+   "dateModified": "2026-11-25",
+   "inLanguage": "en",
+   "speakable": {
+    "@type": "SpeakableSpecification",
+    "cssSelector": [
+     "#what-is-gullydrs",
+     ".lead"
+    ]
+   }
+  },
+  {
+   "@type": "MobileApplication",
+   "@id": "https://gullydrs.com/#app",
+   "name": "GullyDRS",
+   "alternateName": [
+    "Gully DRS",
+    "GullyDRS app",
+    "GullyDRS cricket DRS app",
+    "DRS app for gully cricket"
+   ],
+   "operatingSystem": "Android, iOS",
+   "applicationCategory": "SportsApplication",
+   "description": "A cricket DRS (Decision Review System) app for LBW reviews in gully, tape ball, backyard, nets, school and club cricket – and for cricket academies and coaches – anywhere in the world. Record a delivery with one phone behind the bowler and GullyDRS tracks the ball to show where it pitched, where it hit the batter and whether it was going on to hit the stumps. Videos are processed on the phone, offline.",
+   "featureList": [
+    "Ball tracking from a single phone camera",
+    "Pitching, impact and wickets (hitting / missing) for LBW reviews",
+    "Out, not out and umpire's call decisions",
+    "Shows inconclusive instead of guessing when the ball cannot be tracked reliably",
+    "Detects bat-before-pad (gives not out)",
+    "Works offline: videos never leave the phone",
+    "Works for tape ball, tennis ball and hard ball cricket in the street, nets and on the ground",
+    "For clubs and academies (in testing): bowling analytics from one fixed camera – speed, pitch map, beehive, line and length, swing and seam, and exportable session reports"
+   ],
+   "screenshot": "https://gullydrs.com/assets/img/poster.jpg",
+   "image": "https://gullydrs.com/assets/img/icon-512.png",
+   "publisher": {
+    "@id": "https://gullydrs.com/#org"
+   },
+   "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD",
+    "availability": "https://schema.org/PreOrder",
+    "description": "Android beta open now on Google Play; iPhone coming soon.",
+    "eligibleRegion": {
+     "@type": "Place",
+     "name": "Worldwide"
+    }
+   },
+   "audience": {
+    "@type": "PeopleAudience",
+    "audienceType": "Street, school and club cricketers, cricket academies and coaches worldwide"
+   }
+  },
+  {
+   "@type": "VideoObject",
+   "name": "GullyDRS replay preview",
+   "description": "An animated illustration of a GullyDRS replay: the ball path is drawn, then pitching, impact and wickets appear.",
+   "thumbnailUrl": "https://gullydrs.com/assets/img/poster.jpg",
+   "contentUrl": "https://gullydrs.com/assets/demo.mp4",
+   "uploadDate": "2026-11-12",
+   "duration": "PT5S"
+  },
+  {
+   "@type": "HowTo",
+   "name": "How to review an LBW with GullyDRS",
+   "description": "Use one phone to get a DRS-style ball-tracking decision in street, nets or ground cricket.",
+   "totalTime": "PT1M",
+   "tool": [
+    {
+     "@type": "HowToTool",
+     "name": "A phone (Android or iPhone)"
+    },
+    {
+     "@type": "HowToTool",
+     "name": "A tripod or a steady hand (optional)"
+    }
+   ],
+   "step": [
+    {
+     "@type": "HowToStep",
+     "position": 1,
+     "name": "Set up the phone",
+     "text": "Place the phone on a tripod or hold it still behind the bowler, in line with the stumps."
+    },
+    {
+     "@type": "HowToStep",
+     "position": 2,
+     "name": "Record the delivery",
+     "text": "Start recording before the run-up ends and stop after the ball reaches the batter."
+    },
+    {
+     "@type": "HowToStep",
+     "position": 3,
+     "name": "Get the decision",
+     "text": "GullyDRS shows the ball's path, where it pitched, where it hit, and whether it was going on to hit the stumps."
+    }
+   ]
+  },
+  {
+   "@type": "FAQPage",
+   "@id": "https://gullydrs.com/#faq",
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "What is GullyDRS?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "GullyDRS is a cricket decision review system (DRS) app for gully (street), nets and ground cricket. With one phone behind the bowler, it tracks the ball and shows where it pitched, where it hit and whether it was going on to hit the stumps – like ball tracking on TV."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Does GullyDRS need the internet?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "No. GullyDRS processes videos on your phone and works offline. Nothing is uploaded."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Does GullyDRS work with a tape ball or tennis ball?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Yes. GullyDRS is built for street cricket with a tape ball or tennis ball, and even a crate for stumps. It also works in nets, box cricket and on turf or dirt pitches."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Where should I put the phone?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Behind the bowler, in line with the stumps, on a tripod or held still. A fixed camera in the same net every week gives the most accurate results. On a ground, mark the creases once for full precision."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "What happens if GullyDRS cannot track the ball?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "It says inconclusive instead of guessing, and the on-field decision stands."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "What if the ball hits the bat before the pad?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "When the ball clearly hits the bat before the pad, GullyDRS detects it and gives not out."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Which phones does GullyDRS work on?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "The GullyDRS Android beta is open now on Google Play, and the iPhone version is coming soon to the App Store. It is built for the everyday phones cricketers use around the world."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Is GullyDRS free?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "GullyDRS has a free plan with 20 reviews a month, which will show ads after launch. A Pro subscription, sold through Google Play, gives unlimited reviews with no ads."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "What is the full form of DRS in cricket?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "DRS stands for Decision Review System. In cricket it lets a team challenge an umpire's decision, which is checked with replays and ball tracking. GullyDRS brings DRS-style ball tracking for LBWs to everyday cricket."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "What does umpire's call mean?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Umpire's call means the ball-tracking result is too close to overturn – for example, less than half the ball hitting the stumps zone – so the on-field umpire's original decision stands."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Is GullyDRS related to PTA DRS in Pakistan?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "No. GullyDRS is a cricket app. Here DRS means Decision Review System, not the PTA mobile Device Registration System (DIRBS)."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Which countries can use GullyDRS?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "GullyDRS is made for cricket wherever it is played – from Pakistan, India, Bangladesh, Sri Lanka and Afghanistan to England, Australia, New Zealand, South Africa, the West Indies, the UAE and the USA. The Android beta is open now on Google Play, and players anywhere can join it through the Google Group at https://groups.google.com/g/gullydrs-beta. The iPhone version is coming soon to the App Store."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Can cricket clubs and academies use GullyDRS?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Yes. With a fixed camera in the same net, GullyDRS gives its most accurate results – ideal for clubs, academies, schools and coaches. It reviews LBWs and, in testing, adds bowling analytics such as speed, pitch maps and line and length. Videos stay on the device."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "How can I join the GullyDRS test group?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Join the Google Group at https://groups.google.com/g/gullydrs-beta using the same Gmail you use on Google Play. We then send you the Play test link. For iPhone, follow @gullydrs for news, as the App Store version is coming soon."
+     }
+    }
+   ]
+  },
+  {
+   "@type": "ItemList",
+   "name": "GullyDRS cricket guides",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "url": "https://gullydrs.com/clubs-academies.html",
+     "name": "GullyDRS for cricket clubs, academies and coaches"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "url": "https://gullydrs.com/lbw-rules.html",
+     "name": "LBW rules in cricket explained – and how DRS and umpire's call work"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
+     "url": "https://gullydrs.com/gully-cricket-rules.html",
+     "name": "Gully cricket rules: common street and tape ball cricket rules"
+    }
+   ]
+  }
+ ]
+}
+</script>
 </head>
 <body>
-<div class="wrap">
-<header>
-<a class="brand" href="/"><img src="assets/logo.png" alt="" width="40" height="40"><span>GullyDRS</span></a>
-<nav class="nav"><a href="#how">How it works</a><a href="#pitches">Where it works</a><a href="privacy.html">Privacy</a></nav>
+<div class="progress" aria-hidden="true"></div>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="site-header" id="top">
+  <div class="wrap">
+    <a class="logo" href="/" aria-label="GullyDRS home"><img src="/assets/img/logo.svg" alt="GullyDRS" width="161" height="34"></a>
+    <button class="menu-btn" aria-label="Open menu" aria-expanded="false" aria-controls="nav"><span></span><span></span><span></span></button>
+    <nav class="nav" id="nav" aria-label="Main">
+      <a href="#how">How it works</a>
+      <a href="#decisions">Decisions</a>
+      <a href="/clubs-academies.html">Clubs &amp; academies</a>
+      <a href="/lbw-rules.html">LBW rules</a>
+      <a href="#faq">FAQ</a>
+      <a class="btn small" href="#launch">Join the Android beta</a>
+    </nav>
+  </div>
 </header>
-<main>
-<div class="hero">
-<div>
-<h1>DRS for gully cricket.</h1>
-<p class="lead">Put one phone behind the bowler. GullyDRS tracks the ball and shows pitching, impact and wickets – the way you see it on TV.</p>
-<a class="cta" href="#launch">Get notified at launch</a>
-<span class="note">Coming soon to Android. Free to try.</span>
-</div>
-<div>
-<div class="replay">
-<video src="assets/demo.mp4" poster="assets/poster.jpg" autoplay muted loop playsinline aria-label="An animated GullyDRS replay: the ball path is drawn, then pitching, impact and wickets appear"></video>
-</div>
-<p class="note">Animated illustration of a GullyDRS replay.</p>
-</div>
-</div>
-<section id="how">
-<h2>How it works</h2>
-<ol class="steps">
-<li><h3>Set up the phone</h3><p>On a tripod or held still behind the bowler, in line with the stumps.</p></li>
-<li><h3>Record the delivery</h3><p>Start before the run-up ends, stop after the ball reaches the batter.</p></li>
-<li><h3>Get the decision</h3><p>See the ball’s path, where it pitched, where it hit, and whether it was going on to the stumps.</p></li>
-</ol>
+
+<main id="main">
+
+<!-- HERO -->
+<section class="hero" aria-labelledby="hero-title" style="padding-top:56px">
+  <div class="wrap hero-grid">
+    <div>
+      <span class="pill reveal"><span class="dot" aria-hidden="true"></span>Android beta open now · iPhone coming soon</span>
+      <h1 id="hero-title" class="reveal" style="--d:.08s">DRS for <span class="seam red">gully<svg viewBox="0 0 300 30" preserveAspectRatio="none" aria-hidden="true"><path d="M4 22 Q150 -6 296 18"/></svg></span> cricket.</h1>
+      <p class="lead reveal" style="--d:.16s">Put one phone behind the bowler. GullyDRS tracks the ball and shows <strong>pitching, impact and wickets</strong> – the way you see it on TV.</p>
+      <div class="cta-row reveal" style="--d:.24s">
+        <a class="btn" href="#launch">Get notified at launch <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <a class="btn ghost" href="#how">See how it works</a>
+      </div>
+      <ul class="trust reveal" style="--d:.32s">
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Works offline</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Videos never leave your phone</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Tape ball, tennis ball, hard ball</li>
+      </ul>
+    </div>
+
+    <div class="stage reveal" style="--d:.2s">
+      <svg class="trajectory" viewBox="0 0 400 300" aria-hidden="true"><path id="traj" d="M10 290 C 120 40, 260 20, 390 120"/><g class="t-ball"><circle r="9" fill="#A8231C"/><path d="M-4 -7Q0 0 -4 7M4 -7Q0 0 4 7" stroke="#E6C66A" stroke-width="1.6" fill="none" stroke-linecap="round"/><animateMotion dur="3.4s" repeatCount="indefinite" rotate="auto" keyPoints="0;1" keyTimes="0;1" calcMode="spline" keySplines=".35 0 .65 1"><mpath href="#traj"/></animateMotion></g></svg>
+      <div class="screen">
+        <video id="demo" muted loop playsinline preload="none" poster="/assets/img/poster.webp" width="960" height="720"
+          aria-label="Animated GullyDRS replay: the ball path is drawn, then pitching, impact and wickets appear">
+          <source src="/assets/demo.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="float f1" aria-hidden="true">
+        <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#1E824B" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="2.5" width="12" height="19" rx="3"/><path d="M11 18h2"/></svg></span>
+        <span><b>On your phone</b><small>No upload, no account</small></span>
+      </div>
+      <div class="float f2" aria-hidden="true">
+        <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#A8231C" stroke-width="2.2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M8.5 5.5Q12 12 8.5 18.5M15.5 5.5Q12 12 15.5 18.5" stroke="#E6C66A"/></svg></span>
+        <span><b>Hitting</b><small>Wickets</small></span>
+      </div>
+      <p class="caption">Animated illustration of a GullyDRS replay.</p>
+    </div>
+  </div>
 </section>
-<section id="pitches">
-<h2>Wherever you play</h2>
-<div class="pitches">
-<div><h3>Street</h3><p>Tape ball, tennis ball, a crate for stumps – it still works.</p></div>
-<div><h3>Nets &amp; box cricket</h3><p>Fixed camera, same net every week: the most accurate setup.</p></div>
-<div><h3>Ground</h3><p>Turf or dirt pitch. Mark the creases once for full precision.</p></div>
+
+<!-- MARQUEE -->
+<div class="marquee" aria-hidden="true">
+  <div class="marquee-track">
+    <span>Gully cricket</span><span>Tape ball</span><span>Backyard cricket</span><span>Tennis ball</span><span>Nets</span><span>Box cricket</span><span>Club grounds</span><span>Out or not out?</span>
+    <span>Gully cricket</span><span>Tape ball</span><span>Backyard cricket</span><span>Tennis ball</span><span>Nets</span><span>Box cricket</span><span>Club grounds</span><span>Out or not out?</span>
+  </div>
 </div>
-</section>
-<section>
-<h2>Honest by design</h2>
-<div class="facts">
-<p><strong>Works offline</strong>Videos are processed on your phone. Nothing is uploaded.</p>
-<p><strong>Made for everyday phones</strong>Built for the Android phones people actually use in India and Pakistan.</p>
-<p><strong>Says when it can’t tell</strong>If the ball can’t be tracked reliably, GullyDRS shows “inconclusive” instead of guessing. The on-field decision stands.</p>
-<p><strong>Bat first means not out</strong>When the ball clearly hits the bat before the pad, GullyDRS spots it and gives not out.</p>
+
+<!-- ANSWER BOX (clear definition for search & AI answers) -->
+<div class="wrap answer-wrap">
+  <article class="answer reveal" id="what-is-gullydrs">
+    <img class="ball" src="/assets/img/icon.svg" alt="" width="54" height="54">
+    <div>
+      <h2>What is GullyDRS?</h2>
+      <p><strong>GullyDRS is a cricket DRS (decision review system) app for street, nets and ground cricket.</strong> You put one phone behind the bowler and record the delivery. GullyDRS tracks the ball and tells you where it pitched, where it hit the batter, and whether it was going on to hit the stumps – out, not out or umpire’s call. It works offline: videos are processed on the phone and never uploaded. It is made for cricket wherever it’s played – a gully in Lahore, a lane in Mumbai, a backyard in Sydney or a club net in London.</p>
+    </div>
+  </article>
 </div>
+
+<!-- HOW -->
+<section id="how" aria-labelledby="how-title">
+  <div class="wrap">
+    <div class="head reveal">
+      <span class="eyebrow">How it works</span>
+      <h2 id="how-title">Three steps. <span class="red">One phone.</span></h2>
+      <p>No sensors, no extra cameras, no laptop. If you can record a video, you can review an LBW.</p>
+    </div>
+    <ol class="steps">
+      <li class="step reveal">
+        <svg class="art" viewBox="0 0 70 70" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="23" y="6" width="24" height="40" rx="5"/><path d="M35 46v8M24 64l11-10 11 10"/><circle cx="35" cy="22" r="5" stroke="#A8231C"/></svg>
+        <h3>Set up the phone</h3>
+        <p>On a tripod or held still behind the bowler, in line with the stumps.</p>
+      </li>
+      <li class="step reveal" style="--d:.1s">
+        <svg class="art" viewBox="0 0 70 70" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="16" width="44" height="38" rx="7"/><path d="M50 29l14-8v28l-14-8"/><circle cx="28" cy="35" r="7" fill="#A8231C" stroke="#A8231C"/></svg>
+        <h3>Record the delivery</h3>
+        <p>Start before the run-up ends, stop after the ball reaches the batter.</p>
+      </li>
+      <li class="step reveal" style="--d:.2s">
+        <svg class="art" viewBox="0 0 70 70" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M24 62V20M35 62V20M46 62V20M21 18h28"/><path d="M6 60 C 20 48, 26 30, 33 30" stroke="#A8231C" stroke-dasharray="3 5"/><circle cx="35" cy="30" r="5" fill="#A8231C" stroke="#A8231C"/></svg>
+        <h3>Get the decision</h3>
+        <p>See the ball’s path, where it pitched, where it hit, and whether it was going on to the stumps.</p>
+      </li>
+    </ol>
+  </div>
 </section>
-<section id="launch">
-<h2>Be first on the field</h2>
-<p style="color:var(--muted);max-width:60ch;margin:0 0 24px">We’re testing GullyDRS with street and club players now. Follow @gullydrs on Instagram, YouTube or TikTok to hear the moment it’s on Google Play, or write to join the test group.</p>
-<a class="cta" href="mailto:hello@gullydrs.app?subject=GullyDRS%20test%20group">Join the test group</a>
+
+<!-- DECISIONS -->
+<section id="decisions" aria-labelledby="dec-title" style="padding-top:0">
+  <div class="wrap">
+    <div class="head reveal">
+      <span class="eyebrow">The decisions</span>
+      <h2 id="dec-title">Every call, in the colours you know.</h2>
+      <p>Just like the review on TV, GullyDRS ends with a clear answer – and admits when it can’t give one.</p>
+    </div>
+    <div class="decisions">
+      <article class="call out reveal">
+        <svg class="stumps" viewBox="0 0 120 140" aria-hidden="true"><rect class="zone" x="22" y="14" width="76" height="112" rx="4" fill="none" stroke="#C0281E" stroke-dasharray="4 4" opacity=".55"/><g fill="#FFFDF8" stroke="#1F3B2D" stroke-width="2"><rect x="34" y="26" width="9" height="100" rx="2"/><rect x="55.5" y="26" width="9" height="100" rx="2"/><rect x="77" y="26" width="9" height="100" rx="2"/><g class="bails"><rect x="33" y="20" width="26" height="5" rx="2"/><rect x="61" y="20" width="26" height="5" rx="2"/></g></g><g class="b"><circle cx="60" cy="60" r="14" fill="#A8231C"/><path d="M53 49Q60 60 53 71M67 49Q60 60 67 71" stroke="#E6C66A" stroke-width="2" fill="none"/></g></svg>
+        <span class="tag">Out</span>
+        <h3>Hitting the stumps</h3>
+        <p>Pitched in line, hit in line, and the ball was going on to hit the wickets.</p>
+      </article>
+      <article class="call notout reveal" style="--d:.08s">
+        <svg class="stumps" viewBox="0 0 120 140" aria-hidden="true"><rect class="zone" x="22" y="14" width="76" height="112" rx="4" fill="none" stroke="#1E824B" stroke-dasharray="4 4" opacity=".55"/><g fill="#FFFDF8" stroke="#1F3B2D" stroke-width="2"><rect x="34" y="26" width="9" height="100" rx="2"/><rect x="55.5" y="26" width="9" height="100" rx="2"/><rect x="77" y="26" width="9" height="100" rx="2"/><rect x="33" y="20" width="26" height="5" rx="2"/><rect x="61" y="20" width="26" height="5" rx="2"/></g><g class="b"><circle cx="108" cy="54" r="14" fill="#A8231C"/><path d="M101 43Q108 54 101 65M115 43Q108 54 115 65" stroke="#E6C66A" stroke-width="2" fill="none"/></g></svg>
+        <span class="tag">Not out</span>
+        <h3>Missing</h3>
+        <p>Pitched outside leg, hit outside the line, missing the stumps – or bat before pad.</p>
+      </article>
+      <article class="call ump reveal" style="--d:.16s">
+        <svg class="stumps" viewBox="0 0 120 140" aria-hidden="true"><rect class="zone" x="22" y="14" width="76" height="112" rx="4" fill="none" stroke="#C48C14" stroke-dasharray="4 4" opacity=".7"/><g fill="#FFFDF8" stroke="#1F3B2D" stroke-width="2"><rect x="34" y="26" width="9" height="100" rx="2"/><rect x="55.5" y="26" width="9" height="100" rx="2"/><rect x="77" y="26" width="9" height="100" rx="2"/><rect x="33" y="20" width="26" height="5" rx="2"/><rect x="61" y="20" width="26" height="5" rx="2"/></g><g class="b"><circle cx="94" cy="30" r="14" fill="#A8231C"/><path d="M87 19Q94 30 87 41M101 19Q94 30 101 41" stroke="#E6C66A" stroke-width="2" fill="none"/></g></svg>
+        <span class="tag">Umpire’s call</span>
+        <h3>Too close to call</h3>
+        <p>Only clipping the edge of the zone. Too close to overturn – the on-field call stays.</p>
+      </article>
+      <article class="call inc reveal" style="--d:.24s">
+        <svg class="stumps" viewBox="0 0 120 140" aria-hidden="true"><rect class="zone" x="22" y="14" width="76" height="112" rx="4" fill="none" stroke="#1F3B2D" stroke-dasharray="4 4" opacity=".4"/><g fill="#FFFDF8" stroke="#1F3B2D" stroke-width="2"><rect x="34" y="26" width="9" height="100" rx="2"/><rect x="55.5" y="26" width="9" height="100" rx="2"/><rect x="77" y="26" width="9" height="100" rx="2"/><rect x="33" y="20" width="26" height="5" rx="2"/><rect x="61" y="20" width="26" height="5" rx="2"/></g><g class="b"><circle cx="60" cy="62" r="17" fill="#FFFDF8" stroke="#1F3B2D" stroke-width="2" stroke-dasharray="4 4"/><text x="60" y="70" text-anchor="middle" font-family="Georgia,serif" font-style="italic" font-weight="700" font-size="22" fill="#1F3B2D">?</text></g></svg>
+        <span class="tag">Inconclusive</span>
+        <h3>Can’t tell? It says so.</h3>
+        <p>If the ball can’t be tracked reliably, GullyDRS won’t guess. The on-field decision stands.</p>
+      </article>
+    </div>
+  </div>
 </section>
+
+<!-- FEATURES -->
+<section id="features" aria-labelledby="feat-title" style="padding-top:0">
+  <div class="wrap">
+    <div class="head reveal">
+      <span class="eyebrow">Built for the gully</span>
+      <h2 id="feat-title">TV-style ball tracking, <span class="red">without the TV budget.</span></h2>
+    </div>
+    <div class="bento">
+      <article class="tile t-big reveal">
+        <div>
+          <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 20 C 8 14, 10 6, 15 6"/><circle cx="17.5" cy="6" r="2.5"/><path d="M3 20h18" opacity=".4"/></svg></span>
+          <h3>Pitching, impact, wickets</h3>
+          <p>The three questions every LBW review answers. GullyDRS draws the ball’s path and gives each one a clear verdict, then the final call.</p>
+        </div>
+        <div class="readout" aria-label="Example readout">
+          <div><span>Original decision</span><b class="g">Not out</b></div>
+          <div><span>Pitching</span><b class="r">In line</b></div>
+          <div><span>Impact</span><b class="r">In line</b></div>
+          <div><span>Wickets</span><b class="r">Hitting</b></div>
+        </div>
+      </article>
+      <article class="tile t-2 reveal" style="--d:.1s">
+        <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 8.5a15 15 0 0 1 20 0M5.5 12a10 10 0 0 1 13 0M9 15.5a5 5 0 0 1 6 0"/><path d="M3 3l18 18"/></svg></span>
+        <h3>Works offline</h3>
+        <p>No signal at the ground? No problem. Everything runs on your phone.</p>
+      </article>
+      <article class="tile t-2 reveal">
+        <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="2" width="14" height="20" rx="3"/><path d="M11 18h2"/></svg></span>
+        <h3>Everyday phones</h3>
+        <p>Built for the everyday phones cricketers actually use, wherever they play.</p>
+      </article>
+      <article class="tile t-2 reveal" style="--d:.1s">
+        <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></svg></span>
+        <h3>Private by default</h3>
+        <p>No account, no upload. Your videos stay on your phone; you choose what to share.</p>
+      </article>
+      <article class="tile t-2 reveal" style="--d:.2s">
+        <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 3l6 6-9.5 9.5-3.2-.8-.8-3.2z"/><path d="M8 16l-4.5 4.5"/><circle cx="6" cy="6" r="2.6"/></svg></span>
+        <h3>Bat first? Not out.</h3>
+        <p>When the ball clearly hits the bat before the pad, GullyDRS spots it and gives not out.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- WHERE -->
+<section id="where" aria-labelledby="where-title" style="padding-top:0">
+  <div class="wrap">
+    <div class="head reveal">
+      <span class="eyebrow">Wherever you play</span>
+      <h2 id="where-title">Street, nets or ground.</h2>
+      <p>Tape ball, tennis ball or leather, in any cricket country – if there’s a pitch and a phone, there’s a review.</p>
+    </div>
+    <div class="where">
+      <article class="place reveal">
+        <div class="scene"><svg viewBox="0 0 240 150" fill="none" stroke="#1F3B2D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 120V50h40v70M50 120V30h46v90M150 120V40h40v80M190 120V60h40v60" opacity=".55"/><path d="M62 46h8M80 46h8M62 62h8M80 62h8M162 56h8M176 56h8M20 66h8M34 66h8" opacity=".4"/><path d="M4 120h232"/><rect x="104" y="96" width="32" height="24" rx="2"/><path d="M104 104h32M104 112h32M115 96v24M125 96v24" opacity=".6"/><path class="march" d="M30 140 C 70 110, 110 100, 118 90" stroke="#A8231C" stroke-dasharray="3 6"/><circle class="pop" cx="120" cy="88" r="6" fill="#A8231C" stroke="#A8231C"/></svg></div>
+        <div class="body"><h3>Street &amp; backyard</h3><p>Tape ball, tennis ball, a crate for stumps – it still works.</p><span class="chip">Gully, tape ball &amp; backyard</span></div>
+      </article>
+      <article class="place reveal" style="--d:.1s">
+        <div class="scene"><svg viewBox="0 0 240 150" fill="none" stroke="#1F3B2D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M30 130V24h180v106" /><path d="M30 24l40 20h100l40-20M70 44v86M170 44v86" opacity=".7"/><path d="M50 34v96M90 44v86M110 44v86M130 44v86M150 44v86M190 34v96M70 64h100M70 84h100M70 104h100" opacity=".25"/><path d="M60 130h120"/><path d="M110 130v-30M120 130v-30M130 130v-30M108 99h24"/><path class="march" d="M80 146 C 100 120, 112 110, 120 112" stroke="#A8231C" stroke-dasharray="3 6"/><circle class="pop" cx="121" cy="112" r="6" fill="#A8231C" stroke="#A8231C"/></svg></div>
+        <div class="body"><h3>Nets &amp; box cricket</h3><p>Fixed camera, same net every week: the most accurate setup.</p><span class="chip">Most accurate · clubs &amp; academies</span></div>
+      </article>
+      <article class="place reveal" style="--d:.2s">
+        <div class="scene"><svg viewBox="0 0 240 150" fill="none" stroke="#1F3B2D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><ellipse cx="120" cy="80" rx="108" ry="62" opacity=".6"/><ellipse cx="120" cy="80" rx="60" ry="34" stroke-dasharray="2 6" opacity=".4"/><path d="M104 40h32l6 80h-44z"/><path d="M100 54h40M96 106h48" opacity=".7"/><path d="M114 120v-12M120 120v-12M126 120v-12"/><path class="march" d="M120 46 C 122 70, 124 90, 121 110" stroke="#A8231C" stroke-dasharray="3 6"/><circle class="pop" cx="121" cy="110" r="5" fill="#A8231C" stroke="#A8231C"/></svg></div>
+        <div class="body"><h3>Ground</h3><p>Turf or dirt pitch. Mark the creases once for full precision.</p><span class="chip">Club &amp; school matches</span></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- CLUBS & ACADEMIES -->
+<section id="academies" aria-labelledby="acad-title" style="padding-top:0">
+  <div class="wrap">
+    <div class="tile t-big reveal acad">
+      <div>
+        <span class="eyebrow">For clubs, academies &amp; coaches</span>
+        <h2 id="acad-title">Ball tracking for every net session.</h2>
+        <p>Fix one phone behind the bowler in your nets and review LBWs with confidence. In testing for coaches: speed, pitch maps, beehives and line &amp; length for every ball of a session – with nothing uploaded.</p>
+        <div class="cta-row" style="margin-top:26px"><a class="btn" href="/clubs-academies.html">GullyDRS for academies <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+      </div>
+      <div class="readout" aria-label="Example session summary">
+        <div><span>Balls tracked</span><b><span data-count="24">24</span> / 24</b></div>
+        <div><span>Good area</span><b class="g"><span data-count="58">58</span>%</b></div>
+        <div><span>Hitting the stumps</span><b class="r"><span data-count="9">9</span> balls</b></div>
+        <div><span>Most common length</span><b>Good</b></div>
+        <p class="ex">Example figures for illustration.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HONEST -->
+<section id="honest" aria-labelledby="honest-title" style="padding-top:0">
+  <div class="wrap honest">
+    <div class="head reveal">
+      <span class="eyebrow">Honest by design</span>
+      <h2 id="honest-title">A review you can <span class="red">trust.</span></h2>
+      <p>A DRS is only worth using if both teams believe it. So GullyDRS is built to be straight with you.</p>
+    </div>
+    <div class="facts">
+      <div class="fact reveal"><span class="n">01</span><div><h3>Works offline</h3><p>Videos are processed on your phone. Nothing is uploaded.</p></div></div>
+      <div class="fact reveal"><span class="n">02</span><div><h3>Made for everyday phones</h3><p>Built for the everyday phones cricketers actually use – from Lahore and Mumbai to Dhaka, Johannesburg and London.</p></div></div>
+      <div class="fact reveal"><span class="n">03</span><div><h3>Says when it can’t tell</h3><p>If the ball can’t be tracked reliably, GullyDRS shows “inconclusive” instead of guessing. The on-field decision stands.</p></div></div>
+      <div class="fact reveal"><span class="n">04</span><div><h3>Bat first means not out</h3><p>When the ball clearly hits the bat before the pad, GullyDRS spots it and gives not out.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- AT A GLANCE -->
+<section id="at-a-glance" aria-labelledby="glance-title" style="padding-top:0">
+  <div class="wrap">
+    <div class="head reveal">
+      <span class="eyebrow">At a glance</span>
+      <h2 id="glance-title">GullyDRS, in one table.</h2>
+    </div>
+    <table class="glance reveal">
+      <caption class="skip">Key facts about the GullyDRS app</caption>
+      <tbody>
+        <tr><th scope="row">What it is</th><td>A cricket DRS / ball-tracking app for LBW reviews</td></tr>
+        <tr><th scope="row">Who it’s for</th><td>Street and tape ball players, clubs, academies, schools and coaches – worldwide</td></tr>
+        <tr><th scope="row">Equipment</th><td>One phone behind the bowler (tripod optional)</td></tr>
+        <tr><th scope="row">Shows</th><td>Ball path, pitching, impact, wickets (hitting / missing), final decision</td></tr>
+        <tr><th scope="row">Decisions</th><td>Out, not out, umpire’s call, or inconclusive</td></tr>
+        <tr><th scope="row">Where</th><td>Street (gully), backyard, nets and box cricket, turf and dirt grounds – in any country</td></tr>
+        <tr><th scope="row">Ball types</th><td>Tape ball, tennis ball and hard ball</td></tr>
+        <tr><th scope="row">Internet</th><td>Not needed – works offline, videos stay on the phone</td></tr>
+        <tr><th scope="row">Price</th><td>Free to try</td></tr>
+        <tr><th scope="row">Availability</th><td>Android beta now on Google Play; iPhone (App Store) coming soon</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- GUIDES -->
+<section id="guides" aria-labelledby="guides-title" style="padding-top:0">
+  <div class="wrap">
+    <div class="head reveal">
+      <span class="eyebrow">Guides</span>
+      <h2 id="guides-title">Know the rules. <span class="red">Win the argument.</span></h2>
+    </div>
+    <div class="guides">
+      <a class="guide reveal" href="/lbw-rules.html"><span class="k">LBW &amp; DRS</span><h3>LBW rules in cricket, explained</h3><p>Pitching, impact and wickets with simple diagrams. Plus the DRS full form, how ball tracking works and what umpire’s call really means.</p><span class="go">Read the guide →</span></a>
+      <a class="guide reveal" style="--d:.1s" href="/gully-cricket-rules.html"><span class="k">Gully &amp; tape ball</span><h3>Gully cricket rules</h3><p>One tip one hand, over the wall is out, no LBW, last man batting – the house rules of street and tape ball cricket.</p><span class="go">Read the guide →</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq" aria-labelledby="faq-title" style="padding-top:0">
+  <div class="wrap">
+    <div class="head center reveal">
+      <span class="eyebrow">Questions</span>
+      <h2 id="faq-title">Frequently asked questions</h2>
+    </div>
+    <div class="faq">
+      <details class="reveal" open><summary>What is GullyDRS?</summary><div class="a"><p>GullyDRS is a cricket decision review system (DRS) app for gully (street), nets and ground cricket. With one phone behind the bowler, it tracks the ball and shows where it pitched, where it hit and whether it was going on to hit the stumps – like ball tracking on TV.</p></div></details>
+      <details class="reveal"><summary>Does GullyDRS need the internet?</summary><div class="a"><p>No. GullyDRS processes videos on your phone and works offline. Nothing is uploaded.</p></div></details>
+      <details class="reveal"><summary>Does it work with a tape ball or tennis ball?</summary><div class="a"><p>Yes. GullyDRS is built for street cricket with a tape ball or tennis ball – even with a crate for stumps. It also works in nets, box cricket and on turf or dirt pitches.</p></div></details>
+      <details class="reveal"><summary>Where should I put the phone?</summary><div class="a"><p>Behind the bowler, in line with the stumps, on a tripod or held still. Start recording before the run-up ends and stop after the ball reaches the batter.</p><p>A fixed camera in the same net every week gives the most accurate results. On a ground, mark the creases once for full precision.</p></div></details>
+      <details class="reveal"><summary>What happens if GullyDRS can’t track the ball?</summary><div class="a"><p>It shows “inconclusive” instead of guessing, and the on-field decision stands.</p></div></details>
+      <details class="reveal"><summary>What if the ball hits the bat before the pad?</summary><div class="a"><p>When the ball clearly hits the bat before the pad, GullyDRS detects it and gives not out.</p></div></details>
+      <details class="reveal"><summary>Which phones does GullyDRS work on?</summary><div class="a"><p>The GullyDRS Android beta is open now on Google Play, and the iPhone version is coming soon to the App Store. It’s built for the everyday phones cricketers use around the world.</p></div></details>
+      <details class="reveal"><summary>Is GullyDRS free?</summary><div class="a"><p>GullyDRS has a free plan with 20 reviews a month, which will show ads after launch. A Pro subscription, sold through Google Play, gives unlimited reviews with no ads.</p></div></details>
+      <details class="reveal"><summary>What is the full form of DRS in cricket?</summary><div class="a"><p>DRS stands for Decision Review System. In cricket it lets a team challenge an umpire’s decision, which is checked with replays and ball tracking. GullyDRS brings DRS-style ball tracking for LBWs to everyday cricket. <a href="/lbw-rules.html">Read our LBW &amp; DRS guide</a>.</p></div></details>
+      <details class="reveal"><summary>What does umpire’s call mean?</summary><div class="a"><p>Umpire’s call means the ball-tracking result is too close to overturn – for example, less than half the ball hitting the stumps zone – so the on-field umpire’s original decision stands.</p></div></details>
+      <details class="reveal"><summary>Is GullyDRS related to PTA DRS in Pakistan?</summary><div class="a"><p>No. GullyDRS is a cricket app. Here DRS means Decision Review System, not the PTA mobile Device Registration System (DIRBS).</p></div></details>
+      <details class="reveal"><summary>Which countries can use GullyDRS?</summary><div class="a"><p>GullyDRS is made for cricket wherever it is played – from Pakistan, India, Bangladesh, Sri Lanka and Afghanistan to England, Australia, New Zealand, South Africa, the West Indies, the UAE and the USA. The Android beta is open now on Google Play, and players anywhere can join it through the <a href="https://groups.google.com/g/gullydrs-beta" target="_blank" rel="noopener">GullyDRS beta Google Group</a>. The iPhone version is coming soon to the App Store.</p></div></details>
+      <details class="reveal"><summary>Can cricket clubs and academies use GullyDRS?</summary><div class="a"><p>Yes. With a fixed camera in the same net, GullyDRS gives its most accurate results – ideal for clubs, academies, schools and coaches. It reviews LBWs and, in testing, adds bowling analytics such as speed, pitch maps and line and length. Videos stay on the device. <a href="/clubs-academies.html">See GullyDRS for academies</a>.</p></div></details>
+      <details class="reveal"><summary>How can I join the test group?</summary><div class="a"><p>Join the <a href="https://groups.google.com/g/gullydrs-beta" target="_blank" rel="noopener">GullyDRS beta Google Group</a> using the same Gmail you use on Google Play. We then send you the Play test link. For iPhone, follow @gullydrs for news, as the App Store version is coming soon.</p></div></details>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section id="launch" aria-labelledby="launch-title" style="padding-top:0">
+  <div class="wrap">
+    <div class="cta-card reveal">
+      <img class="bigball" src="/assets/img/icon.svg" alt="" aria-hidden="true">
+      <img class="bigball l" src="/assets/img/icon.svg" alt="" aria-hidden="true">
+      <span class="eyebrow">Android beta open now · iPhone coming soon</span>
+      <h2 id="launch-title" style="margin-top:16px">Be first on the field.</h2>
+      <p>The Android beta is open now on Google Play. Join the group, then we send you the Play test link. The iPhone version is coming soon to the App Store.</p>
+      <div class="cta-row">
+        <a class="btn" href="https://groups.google.com/g/gullydrs-beta" target="_blank" rel="noopener">Join the Android beta <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <a class="btn ghost" href="mailto:gullydrs@gmail.com">Email us</a>
+      </div>
+      <nav class="socials" aria-label="GullyDRS on social media">
+        <a href="https://www.instagram.com/gullydrs/" rel="me noopener" target="_blank" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></a>
+        <a href="https://www.youtube.com/@gullydrs" rel="me noopener" target="_blank" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M23 7.2a3 3 0 0 0-2.1-2.1C19 4.6 12 4.6 12 4.6s-7 0-8.9.5A3 3 0 0 0 1 7.2 31 31 0 0 0 .5 12a31 31 0 0 0 .5 4.8 3 3 0 0 0 2.1 2.1c1.9.5 8.9.5 8.9.5s7 0 8.9-.5a3 3 0 0 0 2.1-2.1 31 31 0 0 0 .5-4.8 31 31 0 0 0-.5-4.8zM9.75 15.5v-7l6 3.5z"/></svg></a>
+        <a href="https://www.tiktok.com/@gullydrs" rel="me noopener" target="_blank" aria-label="TikTok"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M16.6 2h-3.4v13.4a2.9 2.9 0 1 1-2.9-2.9c.3 0 .6 0 .9.1V9.1a6.3 6.3 0 1 0 5.4 6.3V8.7a7.9 7.9 0 0 0 4.6 1.5V6.8A4.6 4.6 0 0 1 16.6 2z"/></svg></a>
+        <a href="https://x.com/gullydrs" rel="me noopener" target="_blank" aria-label="X (Twitter)"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.8 3h3.1l-6.8 7.7L22 21h-6.2l-4.9-6.3L5.3 21H2.2l7.2-8.3L1.8 3h6.4l4.4 5.8zm-1.1 16.2h1.7L7.4 4.7H5.6z"/></svg></a>
+        <a href="https://www.facebook.com/profile.php?id=61596117822219" rel="me noopener" target="_blank" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 8.5V6.6c0-.9.6-1.1 1-1.1h2.6V1.6L14 1.6c-4 0-4.9 3-4.9 4.9v2H6.8v4h2.3V22H14v-9.5h3.3l.4-4z"/></svg></a>
+      </nav>
+    </div>
+  </div>
+</section>
+
 </main>
-<footer>
-<span>© 2026 GullyDRS</span>
-<nav aria-label="GullyDRS on social media" style="display:flex;flex-wrap:wrap;gap:18px"><a href="https://www.instagram.com/gullydrs/" rel="me noopener">Instagram</a><a href="https://www.youtube.com/@gullydrs" rel="me noopener">YouTube</a><a href="https://www.tiktok.com/@gullydrs" rel="me noopener">TikTok</a><a href="https://x.com/gullydrs" rel="me noopener">X</a><a href="https://www.facebook.com/profile.php?id=61596117822219" rel="me noopener">Facebook</a></nav>
-<span style="display:flex;gap:20px"><a href="privacy.html">Privacy policy</a><a href="mailto:hello@gullydrs.app">Contact</a></span>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <img src="/assets/img/logo.svg" alt="GullyDRS" width="142" height="30" loading="lazy">
+        <p style="max-width:38ch">The cricket DRS and ball-tracking app for gully cricket, clubs, academies and coaches. One phone. Every ball tracked.</p>
+      </div>
+      <div>
+        <h4>Product</h4>
+        <ul><li><a href="#how">How it works</a></li><li><a href="#decisions">Decisions</a></li><li><a href="#where">Where it works</a></li><li><a href="#faq">FAQ</a></li></ul>
+      </div>
+      <div>
+        <h4>Guides</h4>
+        <ul><li><a href="/lbw-rules.html">LBW rules &amp; DRS</a></li><li><a href="/lbw-rules.html#umpires-call">Umpire’s call explained</a></li><li><a href="/gully-cricket-rules.html">Gully cricket rules</a></li><li><a href="/clubs-academies.html">For clubs &amp; academies</a></li></ul>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <ul><li><a href="mailto:gullydrs@gmail.com">gullydrs@gmail.com</a></li><li><a href="/privacy.html">Privacy policy</a></li><li><a href="https://www.instagram.com/gullydrs/" rel="me noopener">Instagram</a></li><li><a href="https://www.youtube.com/@gullydrs" rel="me noopener">YouTube</a></li></ul>
+      </div>
+    </div>
+    <div class="legal"><span>© 2026 GullyDRS. All rights reserved.</span><span>Made in Pakistan for cricket everywhere 🏏</span></div>
+  </div>
 </footer>
-</div>
+
+<script src="/assets/main.js" defer></script>
 </body>
 </html>
